@@ -19,7 +19,11 @@ const icecream = props => {
       <h3>Anda memiliki ice cream {props.icecream}</h3>
       <button
         onClick={() => {
-          props.minusIceCream();
+          if(props.icecream > 0){
+            props.minusIceCream();
+          }else{
+            return props.icecream
+          }
         }}
       >
         -

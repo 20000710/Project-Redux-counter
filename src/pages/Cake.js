@@ -19,7 +19,11 @@ const cake = props => {
       <h3>Anda memiliki cake {props.cake}</h3>
       <button
         onClick={() => {
-          minusCake();
+          if(props.cake > 0){
+            props.minusCake();
+          } else{
+            return props.cake
+          }
         }}
       >
         -
